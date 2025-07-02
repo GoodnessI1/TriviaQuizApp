@@ -1,0 +1,45 @@
+.homeCon {
+  /* background: black; */
+  width: 58vw;
+  height: 58vh;
+  border-radius: 15px;
+}
+
+.pageTxt {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.gameParameterCon {
+    /* background: black;    */
+    margin-top: 2vh;
+    /* margin-bottom: 2vh; */
+    padding: 1vh;
+    height: 70%;
+}
+
+
+.startCon {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 2vh; */
+    padding: 1vh;
+}
+
+.start {
+    padding: 1.5vh 3vh;
+    font-weight: bold;
+    font-size: 1.2vw;
+    border-radius: 1.5vh;
+}
+
+.bothHalf{
+    margin: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+}

@@ -1,0 +1,141 @@
+.nav {
+  display: flex;
+  height: 11vh;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vh;
+}
+
+.logoNameDiv {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  margin-left: 2vh;
+  background: white;
+  /* border-radius: 10px; */
+}
+
+.appLogo {
+  width: 9vh;
+  height: 9vh;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 2vh;
+}
+
+.appName {
+  margin-left: 2vh;
+  margin-right: 2vh;
+  font-size: 250%;
+  background: linear-gradient(90deg, rgb(199, 243, 5), #55fa65);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.themeAboutDiv {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  margin-right: 3vh;
+  background: white;
+}
+
+.themeButtonCon {
+  position: relative;
+  display: inline-block;
+  /* background: black; */
+}
+
+.themeButton {
+  display: flex;
+  margin-right: 4vh;
+  margin-left: 2vh;
+  border: none;
+  background: none;
+  justify-content: center;
+  font-size: 3vh;
+}
+
+.themeToolTip {
+  visibility: hidden;
+  background: linear-gradient(90deg, rgb(208, 255, 0), #34f848);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  color: #fff;
+  font-family: Segoe UI, sans-serif;
+  font-size: 2.5vh;
+  text-align: center;
+  padding: 1px 4px;
+  border-radius: 20%;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 38%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.themeButtonCon:hover .themeToolTip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.aboutButton {
+  display: flex;
+  border: none;
+  font-size: 2.5vh;
+  font-family: Segoe UI, sans-serif;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  padding: 2vh;
+  border-radius: 2vh;
+  background: linear-gradient(90deg, rgb(208, 255, 0), #92fe9d);
+  margin-right: 1vh;
+}
+
+.dropDownDiv {
+  position: absolute;
+  top: 105%;
+  left: 1vh;
+  padding-top: 0.5vh;
+  margin-top: -0.5vh;
+  background: linear-gradient(90deg, rgb(211, 250, 39), rgb(108, 250, 122));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 100;
+  /* background: black; */
+}
+
+.dropDownOptions {
+  color: black;
+  font-size: 2.5vh;
+  margin: 1vh;
+  display: flex;
+  align-items: center;
+}
+
+.dropIcon {
+  display: flex;
+  font-size: 2vh;
+  /* margin-right: vh; */
+  gap: 2vh;
+}
+
+.homeTab {
+  display: flex;
+  font-size: 2.5vh;
+  font-family: Segoe UI, sans-serif;
+  background: linear-gradient(90deg, rgb(208, 255, 0), #92fe9d);
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  height: 2.5vh;
+  padding: 2vh;
+  border-radius: 2vh;
+}

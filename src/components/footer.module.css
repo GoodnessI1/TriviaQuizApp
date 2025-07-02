@@ -1,0 +1,66 @@
+.footerCon {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 1vh;
+  background: linear-gradient(90deg, rgb(199, 243, 5), #55fa65);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.movingTxtWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.movingTextCon {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  gap: 150vw;
+  white-space: nowrap;
+  animation: move-left 120s linear infinite;
+}
+
+.movingText {
+  font-size: 2.5vh;
+  /* gap: 20px; */
+}
+
+@keyframes move-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-700%);
+  }
+}
+
+.textMediaDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1vh;
+  padding-right: 3vh;
+}
+
+.appGenText {
+  margin-left: 2vh;
+}
+
+.SnText {
+  margin-left: 2vh;
+  margin-right: 1vh;
+  font-size: 4vh;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+.mediaIconsCon {
+}
+
+.mediaIcons {
+  margin: 0.5vh;
+}
