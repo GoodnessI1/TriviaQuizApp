@@ -13,11 +13,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
-    const location = useLocation();
+  const location = useLocation();
 
-    const isGamePage = location.pathname === "/game";
-
-  // const isGamePage = false;
+  const isGamePage =
+    location.pathname === "/game" ||
+    location.pathname === "/about-game" ||
+    location.pathname === "/about-developer" ||
+    location.pathname === "/result";
 
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -46,15 +48,14 @@ function Navbar() {
 
         {/* ****** ABOUT ****** */}
         {isGamePage ? (
-          //   <Link to="/">🏠 Home</Link>
-          <h1 className={styles.homeTab}>
+          <Link to="/" className={styles.homeTab}>
             <FontAwesomeIcon
               icon={faHouse}
               size="lg"
               style={{ marginRight: "1vh" }}
             />
-            Home{" "}
-          </h1>
+            Home
+          </Link>
         ) : (
           <div
             style={{ position: "relative" }}

@@ -8,6 +8,7 @@ import AboutGame from "../screens/AboutGame";
 import AboutDev from "../screens/AboutDev";
 import GameScreen from "../screens/GameScreen";
 import ResultScreen from "../screens/ResultScreen";
+import GameLoader from "../screens/GameLoader";
 
 function Content() {
   return (
@@ -19,6 +20,7 @@ function Content() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/game" element={<GameScreen />} />
+          <Route path="/loader" element={<GameLoader />} />
           <Route path="/result" element={<ResultScreen />} />
           <Route path="/about-game" element={<AboutGame />} />
           <Route path="/about-developer" element={<AboutDev />} />
