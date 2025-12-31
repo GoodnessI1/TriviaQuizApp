@@ -16,17 +16,17 @@
 }
 
 .appLogo {
-  width: 9vh;
-  height: 9vh;
+  width: 4.5vw;
+  height: 4.5vw;
   object-fit: cover;
   border-radius: 50%;
-  margin-left: 2vh;
+  margin-left: 1vw;
 }
 
 .appName {
-  margin-left: 2vh;
-  margin-right: 2vh;
-  font-size: 250%;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 3rem;
   background: linear-gradient(90deg, rgb(199, 243, 5), #55fa65);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -86,17 +86,16 @@
 
 .aboutButton {
   display: flex;
+  justify-content: space-evenly;
+  width: 9vw;
+  padding: 1rem;
   border: none;
-  font-size: 2.5vh;
+  font-size: 1.4rem;
   font-family: Segoe UI, sans-serif;
   font-weight: bold;
   align-items: center;
-  justify-content: center;
-  height: 6vh;
-  padding: 2vh;
-  border-radius: 2vh;
-  background: linear-gradient(90deg, rgb(208, 255, 0), #92fe9d);
-  margin-right: 1vh;
+  background: transparent;
+  /* background: linear-gradient(90deg, rgb(208, 255, 0), #92fe9d); */
 }
 
 .dropDownDiv {

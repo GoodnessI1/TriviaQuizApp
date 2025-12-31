@@ -5,7 +5,7 @@ import Option from "../components/Option";
 import styles from "./gamescreen.module.css";
 
 function GameScreen() {
-  const { questions, userAnswers, setUserAnswers } = useQuiz();
+  const { questions, userAnswers, setUserAnswers, resetQuiz } = useQuiz();
   const [index, setIndex] = useState(0);
   const navigate = useNavigate();
 
@@ -41,6 +41,35 @@ function GameScreen() {
     if (index + 1 < questions.length) setIndex((prev) => prev + 1);
   };
 
+  const quit = () => {
+    const confirmQuit = window.confirm(
+      "Are you sure you want to quit? Your progress will be lost."
+    );
+
+    if (confirmQuit) {
+      resetQuiz();
+      navigate("/", { replace: true });
+    }
+  };
+
+  const attemptedCount = userAnswers.length;
+  const progressPercent = Math.round((attemptedCount / questions.length) * 100);
+
+  const submitQuiz = () => {
+    if (userAnswers.length === 0) {
+      alert("You haven’t answered any question yet.");
+      return;
+    }
+
+    const confirmSubmit = window.confirm(
+      "Are you sure you want to submit your quiz?"
+    );
+
+    if (confirmSubmit) {
+      navigate("/result");
+    }
+  };
+
   return (
     <div className={styles.game_screen}>
       <div className={styles.question}>
@@ -65,19 +94,32 @@ function GameScreen() {
 
       <div className={styles.nav_and_pb}>
         <div className={styles.nav}>
-          <button className={styles.queNav} onClick={prev}>
-            Prev
+          <button className={styles.queNav} onClick={quit}>
+            Quit
           </button>
-          <button className={styles.queNav} onClick={skip}>
-            Skip
-          </button>
-          <button className={styles.queNav} onClick={next}>
-            Next
-          </button>
+          <div>
+            <button className={styles.queNav} onClick={prev}>
+              Prev
+            </button>
+            <button className={styles.queNav} onClick={skip}>
+              Skip
+            </button>
+            <button className={styles.queNav} onClick={next}>
+              Next
+            </button>
+          </div>
+          <button className={styles.queNav} onClick={submitQuiz}>Submit</button>
         </div>
 
         <div className={styles.progressbar}>
-          {/* You can fill this later */}
+          <div
+            className={styles.progressFill}
+            style={{ width: `${progressPercent}%` }}
+          />
+
+          <span className={styles.progressText}>
+            {attemptedCount} / {questions.length} answered
+          </span>
         </div>
       </div>
     </div>

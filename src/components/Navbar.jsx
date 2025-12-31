@@ -39,12 +39,12 @@ function Navbar() {
       <div className={styles.themeAboutDiv}>
         {/* ****** THEME TOGGLE ****** */}
 
-        <div className={styles.themeButtonCon}>
+        {/* <div className={styles.themeButtonCon}>
           <button onClick={() => toggleTheme} className={styles.themeButton}>
             <FontAwesomeIcon icon={faAdjust} size="lg" />
           </button>
           <span className={styles.themeToolTip}>Theme</span>
-        </div>
+        </div> */}
 
         {/* ****** ABOUT ****** */}
         {isGamePage ? (
@@ -68,9 +68,8 @@ function Navbar() {
               <FontAwesomeIcon
                 icon={faCircleInfo}
                 size="lg"
-                // style={{ marginRight: "2px" }}
-              />{" "}
-              About{" "}
+              />
+              {" "} About
             </button>
 
             {/* ABOUT DROPDOWN */}

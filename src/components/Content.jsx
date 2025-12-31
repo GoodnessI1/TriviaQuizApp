@@ -26,7 +26,6 @@ function Content() {
           <Route path="/about-developer" element={<AboutDev />} />
         </Routes>
       </div>
-
     </div>
   );
 }
